@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SplashScreen</string>
+    <string name="book_unicorn">Unicorn Book</string>
+    <string name="reading_with_unicorn_is_most_cute_thing">reading with unicorn is most cute thing</string>
+    <string name="get_start">Get Start</string>
+    <string name="hello_there_wellcome_back">Hello There, Wellcome Back</string>
+    <string name="sign_in_to_continue">Sign In to continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

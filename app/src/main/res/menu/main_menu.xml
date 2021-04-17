@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="Home"
+        android:id="@+id/navHome"
+        android:icon="@drawable/home_icon"
+        />
+    <item android:title="Books"
+        android:id="@+id/navBooks"
+        android:icon="@drawable/ic_baseline_menu_book_24"/>
+    <item android:title="Bookmark"
+        android:id="@+id/navBookmark"
+        android:icon="@drawable/bookmark_icon"/>
+    <item android:title="Settings"
+        android:id="@+id/navSetting"
+        android:icon="@drawable/settings_icon"/>
+    <item android:title="Buy Books"
+        android:id="@+id/navBuy"
+        android:icon="@drawable/login_icon"/>
+
+        <item android:title="Logout"
+            android:id="@+id/navLogout"
+            android:icon="@drawable/logout_icon"/>
+        <item android:title="Share"
+            android:id="@+id/navShare"
+            android:icon="@drawable/share_icon"
+            />
+        <item android:title="Rate Us"
+            android:id="@+id/navRate"
+            android:icon="@drawable/rate_icon"
+            />
+       
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_200"
+                android:theme="?attr/actionBarTheme"
+                app:popupTheme="@style/Theme.NavigationDrowerAPP.PopupOverlay"
+                app:navigationIcon="@drawable/menu"
+                app:title="Reading Home"
+                android:elevation="4dp"/>
+            <FrameLayout
+                android:id="@+id/nav_host_fragment_container"
+                android:name="com.example.android.splashscreen.ui.home.HomeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/add_icon"
+        android:backgroundTint="@color/purple_200"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
