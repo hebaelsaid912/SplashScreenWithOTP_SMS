@@ -25,6 +25,7 @@ import android.widget.ListView;
 
 import com.example.android.splashscreen.RecycleViewBackEnd.Home_RV.Name;
 import com.example.android.splashscreen.RecycleViewBackEnd.Home_RV.NameAdapter;
+import com.example.android.splashscreen.Users.UserLoginData;
 import com.example.android.splashscreen.ui.bookmark.BookmarkFragment;
 import com.example.android.splashscreen.ui.books.BooksFragment;
 import com.example.android.splashscreen.ui.buybooks.BuybooksFragment;
@@ -76,9 +77,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_container, new HomeFragment()).commit();
             navigationViewCard.setCheckedItem(R.id.navHome);
         }
-
+        saveUserData();
     }
-
+    private void saveUserData() {
+        Intent intent = getIntent();
+        String userID = intent.getStringExtra("id");
+        String userName = intent.getStringExtra("username");
+        String userFullName = intent.getStringExtra("fullname");
+        String userEmail = intent.getStringExtra("email");
+        String userPhone = intent.getStringExtra("phone");
+        System.out.println("id " + userID);
+        System.out.println("username " + userName);
+        System.out.println("fullname " + userFullName);
+        System.out.println("email " + userEmail);
+        System.out.println("phone " + userPhone);
+        UserLoginData data = new UserLoginData(userFullName,userName,userEmail, userPhone,userID);
+    }
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){

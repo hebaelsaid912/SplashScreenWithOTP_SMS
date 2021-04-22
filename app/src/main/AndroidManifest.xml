@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.splashscreen">
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
 
     <application
         android:allowBackup="true"
@@ -9,30 +13,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen"
-        android:usesCleartextTraffic="true"
-        >
-        <activity android:name=".ProfileActivity"
-            android:theme="@style/Theme.SplashScreen.NoActionBar">
-
-        </activity>
-        <activity android:name=".HomeActivity"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ForgetPasswordActivity"
+            android:theme="@style/Theme.SplashScreen.NoActionBar"></activity>
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/Theme.SplashScreen.NoActionBar"></activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/Theme.SplashScreen.NoActionBar"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/Theme.SplashScreen.NoActionBar"></activity>
+        <activity
+            android:name=".loginActivity"
+            android:theme="@style/Theme.SplashScreen.NoActionBar"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/Theme.SplashScreen.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".loginActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/Theme.SplashScreen.NoActionBar">
-
-        </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.SplashScreen.NoActionBar"
-            >
-
         </activity>
 
         <meta-data

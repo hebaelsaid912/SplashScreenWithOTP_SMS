@@ -8,19 +8,12 @@
     tools:context=".ProfileActivity">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:orientation="vertical"
-        android:weightSum="4">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/purple_200"
-            />
-
-    </LinearLayout>
+        android:background="@color/purple_200"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -98,7 +91,8 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
                 android:orientation="vertical"
-                android:weightSum="10">
+                android:weightSum="10"
+                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/TV_display_name"
@@ -119,124 +113,131 @@
                     android:textColor="@android:color/darker_gray"
                     android:textSize="18sp" />
 
-
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/prof_fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="2">
+                    android:hint="Full Name"
+                    android:layout_marginBottom="10dp"
+                    app:boxBackgroundColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:enabled="false"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="Heba Elsaid"
+                        android:textSize="18sp"
+                        android:textColor="@color/purple_500"
+                        android:drawableLeft="@drawable/name1"
+                        android:drawablePadding="10dp"
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        />
 
-                        <TextView
-                            android:id="@+id/TV_display_country"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_weight="1"
-                            android:text="Country"
-                            android:textAllCaps="false"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/TV_country"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_weight="1"
-                            android:text="Tanta,Egypt"
-                            android:textColor="@color/purple_500"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/TV_display_username"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="16dp"
-                            android:text="UserName"
-                            android:textAllCaps="false" />
-
-                        <TextView
-                            android:id="@+id/TV_username"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:text="Heba_Elsaid912"
-                            android:textColor="@color/purple_500"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-                <TextView
-                    android:id="@+id/TV_display_email"
-                    android:layout_width="wrap_content"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/prof_username"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Email"
-                    android:textAllCaps="false" />
+                    android:hint="UserName"
+                    android:layout_marginBottom="10dp"
+                    app:boxBackgroundColor="@color/white"
+                    android:enabled="false"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="Heba_Elsaid912"
+                        android:textSize="18sp"
+                        android:textColor="@color/purple_500"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="10dp"
+                        />
 
-                <TextView
-                    android:id="@+id/TV_email"
-                    android:layout_width="wrap_content"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/prof_Email"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:text="Hebaelsaid47@gmail.com"
+                    android:hint="Email"
+                    android:layout_marginBottom="10dp"
+                    app:boxBackgroundColor="@color/white"
+                    android:enabled="false"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="Hebaelsaid47@gmail.com"
+                        android:textSize="18sp"
+                        android:textColor="@color/purple_500"
+                        android:drawableLeft="@drawable/useremail"
+                        android:drawablePadding="10dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/prof_phonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:layout_marginBottom="10dp"
+                    app:boxBackgroundColor="@color/white"
+                    android:enabled="false"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="01117922987"
+                        android:textSize="18sp"
+                        android:textColor="@color/purple_500"
+                        android:drawableLeft="@drawable/telephone"
+                        android:drawablePadding="10dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/editBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Edit Profile"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/aldrich"
                     android:textColor="@color/purple_500"
-                    android:textSize="18sp" />
-
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="enableEdit"/>
                 <TextView
-                    android:id="@+id/TV_display_number"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/updateBtn"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Phone Number"
-                    android:textAllCaps="false" />
-
-                <TextView
-                    android:id="@+id/TV_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:text="01117922987"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Update"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/aldrich"
                     android:textColor="@color/purple_500"
-                    android:textSize="18sp" />
-
-
-
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="ubdateData"/>
+             </LinearLayout>
             </LinearLayout>
 
         </RelativeLayout>
